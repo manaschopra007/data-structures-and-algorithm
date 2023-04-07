@@ -1,0 +1,26 @@
+// to find second smallest element by finding smalles in first for loop and 
+//then ignoring the smallest element in the second for loop
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+   int smallest =a[0], second=100000000000;
+   for(int i=0;i<n;i++){
+       if(smallest>a[i]){smallest=a[i];}
+   }
+   for(int i=0;i<n;i++){
+       if(smallest==a[i]){continue;}
+       if(second>a[i]){second=a[i];}
+   }
+   cout<<smallest<<" "<<second;
+    
+    
+    
+    return 0;
+}
